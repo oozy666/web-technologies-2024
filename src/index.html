@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="/src/assets/styles/style.css">
 </head>
 <body>
     <!-- Шапка сайта -->
     <header>
-        <img src="assets/images/logo.png" alt="Логотип" width="100">
+        <img src="/src/assets/images/logo.png" alt="Логотип" width="100">
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="/src/index.html">Главная</a></li>
+                <li><a href="/src/contacts.html">Контакты</a></li>
             </ul>
         </nav>
         
         <!-- Хлебные крошки -->
-        <div class="breadcrumbs">
-            <a href="index.html">Главная</a>
-        </div>
+        <nav class="breadcrumbs">
+            <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__link breadcrumbs__link--active" aria-current="page">Главная</span>
+                </li>
+            </ol>
+        </nav>
     </header>
 
     <!-- Основной контент -->

@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="/src/assets/styles/style.css">
 </head>
 <body>
     <!-- Шапка сайта -->
     <header>
-        <img src="assets/images/logo.png" alt="Логотип" width="100">
+        <img src="/src/assets/images/logo.png" alt="Логотип" width="100">
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="/src/index.html">Главная</a></li>
+                <li><a href="/src/contacts.html">Контакты</a></li>
             </ul>
         </nav>
         
         <!-- Хлебные крошки -->
-        <div class="breadcrumbs">
-            <a href="index.html">Главная</a> / <span>Контакты</span>
-        </div>
+        <nav class="breadcrumbs">
+            <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="/src/index.html" class="breadcrumbs__link">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__link breadcrumbs__link--active" aria-current="page">Контакты</span>
+                </li>
+            </ol>
+        </nav>
     </header>
 
     <!-- Основной контент -->
@@ -28,7 +35,7 @@
         <h2 class="heading-2">Contact Us</h2>
         <p class="paragraph">Свяжитесь с нами</p>
         
-        <img src="assets/images/office.jpg" alt="Офис" width="350">
+        <img src="/src/assets/images/office.jpg" alt="Офис" width="350">
         
         <h4 class="heading-4">Address</h4>
         <p class="paragraph">Москва, ул. Примерная</p>
