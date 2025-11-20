@@ -1,7 +1,6 @@
 @import "./global.css";
 @import "./fonts.css";
 @import "./utils.css";
-@import url('fonts.css');
 
 .test {
     color: yellow !important;
@@ -16,14 +15,14 @@
     font-size: 16px;
     line-height: 26px;
     color: #1F3F68;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Heading 1 styles */
 .heading-1 {
     font-size: 64px;
     color: #1F3F68;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
 }
 
@@ -32,14 +31,14 @@
     font-weight: 500;
     font-size: 44px;
     text-align: center;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Heading 3 styles */
 .heading-3 {
     font-size: 36px;
     text-align: center;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
 }
 
@@ -48,7 +47,7 @@
     font-size: 20px;
     line-height: 30px;
     color: #1F3F68;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
 }
 
@@ -58,7 +57,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     opacity: 0.4;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     padding: 10px;
     width: 100%;
     margin-bottom: 15px;
@@ -78,7 +77,7 @@
     border: none;
     padding: 15px 30px;
     cursor: pointer;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -89,21 +88,69 @@
 
 /* Breadcrumbs styles */
 .breadcrumbs {
-    margin: 15px 0;
-    font-family: 'MyFont', sans-serif;
+  --breadcrumbs-height: 40px;
+  --breadcrumbs-arrow-size: 20px;
+  --breadcrumbs-background: #5A98D0;
+  --breadcrumbs-color: #FFFFFF;
+  --breadcrumbs-background-active: #356EAD;
+  --breadcrumbs-color-active: #FFFFFF;
+  --breadcrumbs-background-hover: #4A88C0;
+
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
 }
 
-.breadcrumbs a {
-    color: #5A98D0;
-    text-decoration: none;
+.breadcrumbs__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.breadcrumbs a:hover {
-    text-decoration: underline;
+.breadcrumbs__item {
+  position: relative;
+  margin-right: calc(var(--breadcrumbs-arrow-size) / 2 + 2px); /* Space for the arrow */
 }
 
-.breadcrumbs span {
-    color: #1F3F68;
+.breadcrumbs__link {
+  display: block;
+  position: relative;
+  height: var(--breadcrumbs-height);
+  line-height: var(--breadcrumbs-height);
+  padding: 0 1em 0 2em;
+  background-color: var(--breadcrumbs-background);
+  color: var(--breadcrumbs-color);
+  text-decoration: none;
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - var(--breadcrumbs-arrow-size)) 0%,
+    100% 50%,
+    calc(100% - var(--breadcrumbs-arrow-size)) 100%,
+    0% 100%,
+    calc(var(--breadcrumbs-arrow-size) / 2) 50%
+  );
+  transition: background-color 0.2s ease;
+}
+
+.breadcrumbs__item:first-child .breadcrumbs__link {
+  padding-left: 1.5em;
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - var(--breadcrumbs-arrow-size)) 0%,
+    100% 50%,
+    calc(100% - var(--breadcrumbs-arrow-size)) 100%,
+    0% 100%
+  );
+}
+
+.breadcrumbs__link:not(.breadcrumbs__link--active):hover {
+  background-color: var(--breadcrumbs-background-hover);
+}
+
+.breadcrumbs__link--active {
+  background-color: var(--breadcrumbs-background-active);
+  color: var(--breadcrumbs-color-active);
+  cursor: default;
 }
 
 /* Contact form with background */
@@ -124,7 +171,7 @@
 }
 
 .form-label {
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 500;
     color: #1F3F68;
     margin-bottom: 5px;
@@ -138,7 +185,7 @@
 
 /* Enhanced submit button based on Figma design */
 .submit-button {
-    background: linear-gradient(45deg, #5A98D0, #4A88C0);
+    background: linear-gradient(90deg, #3A8BFF 0%, #A33BFF 100%);
     box-shadow: 5px 10px 20px rgba(16, 112, 177, 0.3);
     border-radius: 10px;
     font-weight: 600;
@@ -150,14 +197,14 @@
     border: none;
     padding: 15px 40px;
     cursor: pointer;
-    font-family: 'MyFont', sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
     display: inline-block;
     min-width: 200px;
 }
 
 .submit-button:hover {
-    background: linear-gradient(45deg, #4A88C0, #3A78B0);
+    background: linear-gradient(90deg, #2F7BEE 0%, #932BEB 100%);
     box-shadow: 5px 15px 25px rgba(16, 112, 177, 0.4);
     transform: translateY(-2px);
 }
