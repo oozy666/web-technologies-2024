@@ -7,122 +7,108 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(235, 236, 237);
     width: 1440;
-    height: 6024;
+    height: auto;
 }
 
+/* Шапка с фиксированной шириной пунктов меню */
 .site-header {
     background-color: white;
     margin-top: 20px;
     padding: 16px 24px;
-    height: Hug(56px)px;
+    height: 56px;
     width: 1124px;
     margin-left: 108px;
     border-radius: 12px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .site-logo {
-    float: left;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .text-color-blue {
-    color: rgba(45, 102, 238, 1)
+    color: rgba(46, 79, 79, 1) !important;
 }
 
 .header-nav {
-    float: left;
+    flex-grow: 1;
     margin-left: 40px;
+    min-width: 0;
 }
 
 .nav-menu {
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .nav-item {
-    display: inline-block;
-    margin-left: 12px;
+    margin-right: 24px;
+    flex-shrink: 0;
 }
 
 .nav-item a {
     color: black;
     font-size: 14px;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .header-contacts {
-    height: 24px;
-    width: 472px;
-    margin-left: 80px;
-    float: left;
+    flex-shrink: 0;
     font-size: 14px;
 }
 
-.contact-phone, .contact-email {
-    float: left;
-}
-
 .contact-phone {
-    width: 266px;
-    height: 24px;
-}
-
-.contact-email {
-    width: 174px;
-    height: 24px;
-}
-
-.email-icon {
-    margin-top: 2px;
-    margin-left: 32px;
-    height: 16;
-    width: 20px
+    display: flex;
+    align-items: center;
 }
 
 .phone-icon {
     height: 20px;
-    width: 20px
-}
-
-.contact-icon {
-    float: left;
+    width: 20px;
+    margin-right: 8px;
 }
 
 .contact-info {
-    margin-left: 8px;
-    margin-top: 0;
-    float: left;
+    margin: 0;
+    font-size: 14px;
 }
 
+/* Основной контент */
 .main-description {
-    width:600px;
+    width:650px;
     height:220px;
     margin-top: 94px;
     margin-left: 106px;
 }
 
 .header-text {
-    
-    font-size: 36px;
-    line-height: 51px;
+    font-size: 38px;
+    line-height: 54px;
     font-weight: 700;
 }
 
 .default-text {
     color: black;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 22px;
     font-weight: 500;
 }
 
 .main-feedback {
-    width: 676px;
-    height: 186px;
+    width: 700px;
+    height: 200px;
     margin-top: 64px;
-    padding: 24px;
+    padding: 28px;
     background-color: white;
     margin-left: 108px;
     border-radius: 12px;
@@ -131,45 +117,49 @@ body {
 }
 
 .subheader-text {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 26px;
     font-weight: 700;
 }
 
 .feedback-form {
-    width: 628px;
-    height: 58px;
-    margin-top: 24px;
+    width: 650px;
+    height: 62px;
+    margin-top: 28px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 .feedback-field {
-    width: 224px;
-    height: 54px;
-    float: left;
+    width: 240px;
+    height: 58px;
 }
 
 .form-label {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     color: rgba(102, 112, 133, 1);
+    margin-bottom: 8px;
+    display: block;
 }
 
 #feedback-phone {
     padding-left: 22px;
-    margin-left: -1px;
-    width: 175px;
-    height: 30px;
+    width: 185px;
+    height: 32px;
     border: none;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 15px;
 }
 
 #feedback-name {
-    width: 200px;
-    height: 30px;
+    width: 210px;
+    height: 32px;
     border: none;
-    margin-left: -2px;
     padding-left: 2px;
     border-bottom: 1px solid rgba(208, 213, 221, 1);
+    font-size: 15px;
 }
 
 #feedback-image {
@@ -180,428 +170,229 @@ body {
 }
 
 .feedback-button {
-    width: 132px;
-    height: 58px;
+    width: 140px;
+    height: 62px;
     border: none;
-    background-color: rgba(45, 102, 238, 1);
-    padding-top: 11px;
-    padding-right: 24px;
-    padding-bottom: 11px;
-    padding-left: 24px;
+    background-color: rgba(46, 79, 79, 1) !important;
+    padding: 12px 26px;
     color: white;
-    text-align: left;
     cursor: pointer;
     border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
+/* Технологии - ИСПРАВЛЕНА ШИРИНА */
 .development-info {
-    height: 400px;
+    height: auto;
+    min-height: 320px;
     background-color: white;
+    padding: 40px 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px 108px;
+    border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .development-technologies {
-    margin-left: 108px;
-    float: left;
-    width: 496px;
-    height: 200px;
+    width: 600px;
+    max-width: 600px;
 }
 
 .development-categories {
-    margin-top: 40px;
-    margin-left: 40px;
-    float: left;
-    width:233px;
-    height: 340px;
+    width: 250px;
 }
 
 .development-list {
     list-style-type: none;
+    padding: 0;
 }
 
 .development-item {
-    height: 40px;
+    height: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .development-item a {
     color: black;
     text-decoration: none;
+    font-size: 16px;
 }
 
+/* Новый класс для длинных текстов в технологиях */
+.tech-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 580px;
+    margin-right: 20px;
+}
+
+/* Проекты - УВЕЛИЧЕНЫ ИКОНКИ */
 .projects {
-    width:1300px;
-    height: 350px;
+    width: 800px;
     margin-left: 106px;
+    padding: 40px 0;
 }
 
 .project-list {
-    width: 1223px;
-    height: 280px;
+    display: flex;
+    gap: 80px;
+    margin-top: 40px;
 }
 
-.project-column1, .project-column2, .project-column3 {
-    float: left;
-    width: 391px;
-    height: 280px;
+.project-column {
+    width: 350px;
 }
 
 .project-item {
-    margin-left: 60px;
-    width: 391px;
-    height: 44px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    height: 60px;
 }
 
 .project-image {
-    position: absolute;
-    margin-top: -15px;
-    margin-left: -65px;
-}
-
-.clients {
-    width: 1230px;
-    height: 700px;
-    margin-left: 106px;
-}
-
-.clients-companies {
-    margin-top: 50px;
-    width: 1000px;
-    height: 58px;
-}
-
-.clients-list {
-    margin-left: 10px;
-    width: 740px;
-    height: 58px;
-    padding: 0;
-    display: inline-block;
-    list-style-type: none;
-}
-
-.clients-item {
     margin-right: 20px;
-    display: inline-block;
-    height: 58px;
+    width: 48px !important;  
+    height: 48px !important; 
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 78px;
+    max-height: 78px;
 }
 
-.clients-item a {
-    color: black;
-    font-size: 17px;
-    text-decoration: none;
-}
-
-.clients-button {
-    margin-top: 15px;
-    float: right;
-    width: 207px;
-    height: 40px;
-    border: none;
-    background-color: rgba(45, 102, 238, 1);
-    padding: 11px 24px;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-.clients-iteka {
-    width: 600px;
-    height: 300px;
-}
-
-.iteka-info {
-    width: 316px;
-    height: 70px;
-}
-
-.iteka-category, .users-growth, .users-active {
-    float: left;
-}
-
-.iteka-icon {
-    position: absolute;
-    margin-top: 15px;
-}
-
-.iteka-text{
-    margin-left: 25;
-    margin-left: 25px;
-    margin-right: 21px;
-}
-
-.aside-image {
-    position: absolute;
-    margin-top: -260px;
-    margin-left: 400px;
-}
-
-.users-growth {
-    padding: 0;
-    margin-right: 45px;
-}
-
-.clients-app {
-    float: left;
-    margin-right: 16px;
-}
-
-.text-color-white {
-    color: white;
-}
-
+/* Форма контактов */
 .contact-form {
-    
-    background-color:rgba(45, 102, 238, 1);
+    background-color: rgba(46, 79, 79, 1) !important;
     height: 300px;
+    padding: 60px 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contact-form__text {
-    margin-left: 108px;
-    float: left;
-    width:600px;
-    height: 168px;
+    width: 400px;
+}
+
+.header__text {
+    font-size: 38px;
+    line-height: 44px;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.default__text {
+    color: white;
+    font-size: 17px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.text_color_white {
+    color: white;
 }
 
 .contact-form__form {
     background-color: white;
-    width: 600px;
-    padding: 10px 20px;
-    height:190px;
-    float: left;
-    margin-top: 45px;
+    width: 400px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08),
                  0px 0px 24px rgba(0, 0, 0, 0.16);
 }
 
 .contact__form {
-    width: 450px;
-    height: 58px;
-    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .contact__button {
-    margin-top: 20px;
-    float: right;
-    width: 178;
-    height: 40;
+    width: 185px;
+    height: 44px;
     border: none;
-    background-color: rgba(45, 102, 238, 1);
-    padding: 11px 24px;
+    background-color: rgba(46, 79, 79, 1) !important;
+    padding: 12px 26px;
     color: white;
     text-align: center;
     cursor: pointer;
     border-radius: 8px;
-}
-
-.development-stages {
-    height:810px;
-    background-color: white;
-}
-
-.development-stages-text{
-    margin-left: 108px;
-    padding-top: 10px;
-}
-
-.stage-header {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
-    margin-left: 55px;
+    align-self: flex-end;
 }
 
-.stage-image {
-    position: absolute;
-    margin-top: -60px;
-}
-
-.stage-item {
-    margin-left: 108px;
-    width: 392px;
-    height: 172px;
+.faq-section {
     background-color: white;
-    float: left;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 40px 108px;
+    margin: 40px 108px;
     border-radius: 12px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08),
-                 0px 0px 24px rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
 }
 
-.left-column {
-    margin-right: 250px;
+.faq-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.company-about {
-    width:1250px;
-    height: 500px;
-    margin-left: 106px;
-}
-
-.company-text {
-    width: 600px;
-    height: 341px;
-    float: left;
-}
-
-.company-stats {
-    width:200px;
-    float: left;
-}
-
-.company-video {
-    margin-left: 20px;
-    margin-top: 40px;
-    float: left;
-}
-
-.video-button {
-    position: absolute;
-    margin-top: 166px;
-    margin-left: -331.5px;
-}
-
-.book-advert {
-    height:588px;
-    background-color: rgba(45, 102, 238, 1);
-}
-
-.book-advert-text{
-    margin-left: 108px;
-    padding-top: 10px;
-}
-
-.book-form {
-    margin-left: 108px;
-    width: 600px;
-    height: 184px;
-    background-color: white;
-    padding: 20px;
-    float: left;
-    border-radius: 12px;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08),
-                 0px 0px 24px rgba(0, 0, 0, 0.16);
-}
-
-.book-form-name {
-    margin-top: 17px;
-}
-
-.book-field{
-    padding-top: 60px;
-}
-
-#feedback-email{
-    width: 425px;
-    border: none;
-    margin-left: -2px;
-    padding-left: 2px;
-    border-bottom: 1px solid rgba(208, 213, 221, 1);
-}
-
-.book-button {
-    margin-top: 20px;
-    width: 225px;
-    height: 40px;
-    float: right;
-    border-radius: 8px;
-    background-color: #2D66EE;
-    border: none;
-    cursor: pointer;
-    color: white;
-}
-
-.book-image {
-    margin-left: 200px;
-    margin-top: -140px;
-    float: left;
-}
-
-.book-image img {
-    width:240px;
-    height: 420px;
-}
-
-.faq {
-    height:350px;
-    background-color: white;
-}
-
-.faq-text{
-    padding-top: 10px;
-    margin-left: 108px;
+.faq-container .header-text {
+    font-size: 38px;
+    line-height: 54px;
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .faq-questions {
-    margin-left: 108px;
-    height: 420px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .question {
-    margin-right: 20px;
-    width:600px;
-    height:84px;
-    float: left;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-top: 0.5px solid rgba(208, 213, 221, 1);
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
-.faq-image {
-    position: absolute;
-    margin-top: -70px;
-    margin-left: 535px;
-}
-
-.border-bottom {
+.question:last-child {
     border-bottom: 0.5px solid rgba(208, 213, 221, 1);
 }
 
-.footer {
-    margin-left: 108px;
-    width:1224px;
-    height:222px;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: rgba(16, 24, 40, 1);
+.stage-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    max-width: 700px;
+    word-wrap: break-word;
 }
 
-.footer-logo {
-    width:1200px;
-    text-align: center;
+.faq-image {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
-.footer-main {
-    width: 1200px;
-    height: 400px;
-    float: left;
+/* Удаленные стили */
+.clients,
+.company-about,
+.development-stages,
+.book-advert {
+    display: none;
 }
 
-.footer-icon {
-    position: absolute;
-    margin-top: 12px;
-}
-
-.icon-grayscale {
-    filter: grayscale(90%) brightness(160%);
-}
-
-.footer-item {
-    padding-left: 20px;
-    float: left;
-    width:280px;
-    height:60px;
-}
-
-.footer-text {
-    margin-left: 25px;
-}
-
-.footer-map {
-    position: absolute;
-    margin-left:-130px;
-    margin-top: 16px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 80px;
-    width:1200px;
+hr {
+    margin: 40px 108px;
+    border: none;
+    height: 1px;
+    background-color: rgba(208, 213, 221, 0.5);
 }
