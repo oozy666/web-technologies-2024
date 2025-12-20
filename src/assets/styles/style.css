@@ -10,7 +10,7 @@ body {
     height: auto;
 }
 
-/* Шапка с фиксированной шириной пунктов меню */
+/* ===== HEADER ===== */
 .site-header {
     background-color: white;
     margin-top: 20px;
@@ -83,12 +83,16 @@ body {
     font-size: 14px;
 }
 
-/* Основной контент */
-.main-description {
-    width:650px;
-    height:220px;
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin: 0 108px;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 650px;
+    height: 220px;
     margin-top: 94px;
-    margin-left: 106px;
 }
 
 .header-text {
@@ -104,13 +108,13 @@ body {
     font-weight: 500;
 }
 
-.main-feedback {
+/* Feedback Section */
+.feedback-section {
     width: 700px;
     height: 200px;
     margin-top: 64px;
     padding: 28px;
     background-color: white;
-    margin-left: 108px;
     border-radius: 12px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08),
                  0px 0px 24px rgba(0, 0, 0, 0.16);
@@ -162,13 +166,6 @@ body {
     font-size: 15px;
 }
 
-#feedback-image {
-    position: absolute;
-    margin-top: 6px;
-    width: 20px;
-    height: 20px;
-}
-
 .feedback-button {
     width: 140px;
     height: 62px;
@@ -182,16 +179,15 @@ body {
     font-weight: 600;
 }
 
-/* Технологии - ИСПРАВЛЕНА ШИРИНА */
-.development-info {
+/* Development Section */
+.development-section {
     height: auto;
     min-height: 320px;
     background-color: white;
-    padding: 40px 108px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 40px 108px;
     border-radius: 12px;
     box-sizing: border-box;
 }
@@ -222,7 +218,6 @@ body {
     font-size: 16px;
 }
 
-/* Новый класс для длинных текстов в технологиях */
 .tech-text {
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -230,10 +225,9 @@ body {
     margin-right: 20px;
 }
 
-/* Проекты - УВЕЛИЧЕНЫ ИКОНКИ */
-.projects {
+/* Projects Section */
+.projects-section {
     width: 800px;
-    margin-left: 106px;
     padding: 40px 0;
 }
 
@@ -252,6 +246,13 @@ body {
     display: flex;
     align-items: center;
     height: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.project-item:hover {
+    background-color: rgba(46, 79, 79, 0.05);
 }
 
 .project-image {
@@ -260,18 +261,17 @@ body {
     height: 48px !important; 
     min-width: 48px;
     min-height: 48px;
-    max-width: 78px;
-    max-height: 78px;
 }
 
-/* Форма контактов */
-.contact-form {
+/* Contact Section */
+.contact-section {
     background-color: rgba(46, 79, 79, 1) !important;
     height: 300px;
-    padding: 60px 108px;
+    padding: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 12px;
 }
 
 .contact-form__text {
@@ -326,10 +326,10 @@ body {
     align-self: flex-end;
 }
 
+/* FAQ Section */
 .faq-section {
     background-color: white;
-    padding: 40px 108px;
-    margin: 40px 108px;
+    padding: 40px;
     border-radius: 12px;
     box-sizing: border-box;
 }
@@ -362,6 +362,12 @@ body {
     border-top: 0.5px solid rgba(208, 213, 221, 1);
     padding: 0 10px;
     box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.question:hover {
+    background-color: rgba(46, 79, 79, 0.05);
 }
 
 .question:last-child {
@@ -382,17 +388,81 @@ body {
     flex-shrink: 0;
 }
 
-/* Удаленные стили */
-.clients,
-.company-about,
-.development-stages,
-.book-advert {
-    display: none;
+/* ===== FOOTER ===== */
+.footer {
+    margin: 40px 108px;
+    width: 1124px;
+    height: auto;
+    min-height: 180px;
+    border-radius: 12px;
+    padding: 30px;
+    background-color: rgba(16, 24, 40, 1);
+    box-sizing: border-box;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    text-align: left;
+    font-size: 22px;
+    color: white !important;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-nav li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: rgba(46, 79, 79, 1);
+}
+
+.footer-contacts {
+    text-align: right;
+}
+
+.footer-contacts p {
+    color: white;
+    font-size: 14px;
+    margin: 0 0 8px 0;
+}
+
+/* ===== HR ===== */
 hr {
     margin: 40px 108px;
     border: none;
     height: 1px;
     background-color: rgba(208, 213, 221, 0.5);
+}
+
+/* ===== REMOVED STYLES ===== */
+.clients,
+.company-about,
+.development-stages,
+.book-advert,
+.main-description,
+.main-feedback,
+.development-info,
+.contact-form,
+.projects {
+    display: none;
 }
