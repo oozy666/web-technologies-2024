@@ -1,0 +1,175 @@
+@media screen and (max-width: 769px) {
+    nav {
+        display: none;
+      }
+    
+      header {
+        display: flex;
+        justify-content: space-between;
+    
+        .contact-info {
+          display: block;
+          font-size: 12px;
+    
+          .phones {
+            display: none;
+          }
+        }
+    
+        .menu-icon {
+          display: block;
+        }
+      }
+    
+      .logo {
+        margin: 0 0 0 70px;
+        font-size: 20px;
+      }
+    
+      .intro {
+        flex-direction: column;
+        padding: 30px 20px;
+        width: 50%;
+      }
+    
+      main .intro .text, .intro .text .form {
+        width: fit-content;
+        margin-top: 20px;
+      }
+    
+      .text .form button {
+        width: fit-content;
+      }
+    
+      .form .form-elements {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .content {
+        flex-direction: row;
+        gap: 20px;
+      }
+    
+      .development-cycle .content {
+        .left, .right {
+          width: 50%;
+        }
+      }
+    
+      .footer {
+        padding: 20px;
+    
+        .content {
+          align-items: center;
+        }
+      }
+}
+
+@media screen and (max-width: 440px) {
+    header {
+        padding: 10px 15px;
+    
+        .menu-icon {
+          display: block;
+        }
+    
+        .contact-info {
+          display: none;
+        }
+      }
+    
+      .logo {
+        font-size: 20px;
+        margin: 0 auto;
+      }
+    
+      .intro {
+        padding: 20px 10px;
+        width: fit-content;
+      }
+    
+      .mobile-menu_wrapper .mobile-menu_contact-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 22px;
+        align-items: center;
+      }
+    
+      .mobile-email, .mobile-phones {
+        font-size: 14px !important;
+      }
+    
+      .mobile-menu_menu-item {
+        font-size: 24px !important;
+      }
+    
+      .mobile-menu_logo {
+        width: 144px !important;
+        height: 24px !important;
+      }
+    
+      main .intro .text {
+        h1 {
+          font-size: 24px;
+          line-height: 1.4;
+          width: 100%;
+        }
+    
+        p {
+          font-size: 12px;
+          width: 100%;
+        }
+      }
+    
+      .form {
+        h3 {
+          font-size: 16px;
+        }
+    
+        label, input {
+          font-size: 12px;
+        }
+    
+        button {
+          width: 100%;
+          font-size: 12px;
+          margin-top: 10px;
+        }
+      }
+    
+      .development-cycle {
+        padding: 20px 10px;
+      }
+    
+      .content {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .development-cycle .content {
+        .left, .right {
+          width: 100%;
+          font-size: 12px;
+        }
+      }
+    
+      .content .right ul {
+        font-size: 20px;
+      }
+    
+      body .footer {
+        font-size: 12px;
+        padding: 15px 20px 15px 20px;
+    
+        .content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          margin: 5px;
+          gap: 20px;
+        }
+      }
+}

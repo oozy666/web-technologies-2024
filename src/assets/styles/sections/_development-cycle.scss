@@ -1,0 +1,107 @@
+.development-cycle {
+    background-color: white;
+    margin-top: 0px;
+  
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 51.84px;
+      letter-spacing: 0.32645100355148315px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-bottom: 40px;
+    }
+  
+    .content {
+      display: flex;
+      justify-content: space-between;
+  
+      .left, .right {
+        width: 48%;
+      }
+
+      .left{
+        display: flex;
+        flex-direction: column;
+
+        h3{
+          font-size: 26px;
+          font-weight: 600;
+          line-height: 26px;
+          letter-spacing: 0.3799999952316284px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+          margin-top:0;
+          margin-bottom: 40px;
+        }
+
+        .dev-cycle_title{
+          margin-bottom: 34px;
+
+          p{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: -0.23999999463558197px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            margin:0;
+          }
+        }
+
+        .two_types{
+          display: flex;
+          flex-direction: column;
+          margin-top:0;
+          gap:32px;
+          
+
+        }
+      }
+  
+      .right {
+        margin: 25px 0 25px 0;
+  
+        ul {
+          list-style: none;
+          padding: 0;
+          gap:12px;
+  
+          li {
+            padding: 12px 0 12px 0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+  
+            a {
+              text-decoration: none;
+              color: #000;
+              margin-right: 5px;
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: 0.3799999952316284px;
+              text-align: left;
+  
+              &:hover {
+                text-decoration: underline;
+                text-decoration-color: #add8e6;
+                font-weight: bold;
+                color: #000;
+              }
+            }
+  
+            &::after {
+              content: ">";
+              color: #007bff;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  

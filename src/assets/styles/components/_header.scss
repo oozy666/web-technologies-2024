@@ -1,0 +1,16 @@
+// components/_header.scss
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 50px;
+    right: 50px;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    z-index: 1000;
+  }
+  

@@ -1,0 +1,23 @@
+.mobile-menu_content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    overflow: auto;
+    display: none;
+  }
+  
+  .mobile-menu_wrapper {
+    padding: 40px 60px;
+  }
+  
+  .mobile-menu_cross {
+    display: block;
+    justify-self: flex-end;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  

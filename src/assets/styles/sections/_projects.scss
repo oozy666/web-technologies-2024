@@ -1,0 +1,345 @@
+.projects{
+
+    h1{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 51.84px;
+        letter-spacing: 0.32645100355148315px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin:0;
+    }
+
+    .projects-header{
+        width: 50%;
+    }
+
+    .projects-lists{
+        margin-top: 40px;
+        margin-bottom: 120px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .theme-left, .theme-center, .theme-right{
+        width: calc(33%);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            list-style: none;
+        }
+        li{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: -0.40799999237060547px;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+    }
+
+    .icon-list{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .white-circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        padding: 5px;
+        border-radius: 100px;
+        background-color:white;
+
+        img{
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-self: center;
+        }
+    }
+
+    .project-example{
+        
+        .project-text_container{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            gap:24px;
+            margin-bottom:40px;
+            padding: 0 0 14px 0;
+
+
+            
+
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 20px;
+                letter-spacing: -0.23999999463558197px;
+                text-align: left;
+                text-underline-position: from-font;
+                text-decoration-skip-ink: none;
+                margin:0;
+
+            }
+        }
+    }
+
+    .I-teka{
+        .I-teka_container{
+            display: flex;
+            flex-direction: row;
+
+            nav{
+                width: 70%;
+                justify-content: space-between;
+                align-items: center;
+                gap: 12px;
+            }
+
+            a{
+                font-size: 18px;
+                margin:15px;
+                padding:4px;
+    
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-color: #7dd2ee;
+    
+                    color: #000;
+                  }
+            }
+            .button_I-teka{
+                display: grid;
+                width: 30%;
+                align-self: center;
+    
+                button{
+                    justify-self: center;
+    
+                    padding: 10px;
+                    margin: 9px 0 9px 0;
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    align-content: flex-start;
+                    line-height: 1.5;
+                    white-space: normal;
+                }
+            }
+        }
+
+        .I-teka_main{
+            display: flex;
+            flex-direction: row;
+            gap:24px;
+            margin-top:40px;
+
+            .I-teka_main-info{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap:32px;
+
+
+                .I-teka_main-info-desc{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+
+                    p{
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        letter-spacing: -0.23999999463558197px;
+                        text-align: left;
+                        text-underline-position: from-font;
+                        text-decoration-skip-ink: none;
+
+                    }
+
+                    nav{
+                        display: flex;
+                        justify-content:flex-start;
+                        align-items: center;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        gap: 0px;
+                      
+                        a {
+                          display: flex;
+                          align-items: center;
+                          font-size: 16px;
+                          color: #333;
+                      
+                          &:not(:last-child)::after {
+                            content: '/';
+                            align-items: center;
+                            margin: 0 8px;
+                            color: #2d66ee; 
+                          }
+                      
+                          a {
+                            text-decoration: none;
+                            color: #007bff;
+                            transition: color 0.3s;
+                      
+                            &:hover {
+                              color: #0056b3;
+                            }
+                          }
+                      
+                          &.active {
+                            font-weight: bold;
+                            color: #555;
+                      
+                            a {
+                              pointer-events: none;
+                              color: inherit; // Снимаем цвет ссылки для активного элемента
+                            }
+                          }
+                        }
+                      }
+
+                    .icons-labels{
+                        display: flex;
+                        flex-direction: row;
+                        gap:32px;
+
+                        .image_i-teka_wrapper{
+                            display: grid;
+                            width: 24px;
+                            height: 24px;
+                            justify-content: center;
+                            align-self: center;
+                        }
+
+                        p{
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            letter-spacing: -0.23999999463558197px;
+                            text-align: left;
+                            text-underline-position: from-font;
+                            text-decoration-skip-ink: none;
+
+                        }
+
+                        .kazah, .medicine{
+                            display: flex;
+                            flex-direction: row;
+                            gap:8px;
+                            align-items: center;
+
+                            p{
+
+                            }
+
+                            
+                        }
+
+                        .kazah{
+                            img{
+                                width: 16px;
+                                height: 20px;
+                                align-self: center;
+                            }
+                        }
+
+                        .medicine{
+                            img{
+                                width: 20px;
+                                height: 18px;
+                                align-self: center;
+                            }
+                        }
+                    }
+
+                    .user-numbers{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 48px;
+
+                        .user_growth, .active_users{
+                            display: flex;
+                            flex-direction: column;
+                            gap:8px;
+
+                            .numbers{
+                                font-size: 24px;
+                                font-weight: 700;
+                                letter-spacing: 0.32645100355148315px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                margin:0;
+                            }
+                            .numbers-label{
+                                color: #667085;
+                                font-size: 13px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                letter-spacing: -0.07800000160932541px;
+                                text-align: left;
+                                text-underline-position: from-font;
+                                text-decoration-skip-ink: none;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .store-images{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 16px;
+
+                        .AppStore, .GooglePlay{
+
+                            border: none;
+                            border-radius: 10px;
+                            padding-inline: 0px;
+
+                            img{
+                                background-size: cover;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        
+                    }
+                }
+                
+
+            }
+
+            .I-teka_main-img{
+                justify-self: center;
+                width: 50%;
+                align-self: center;
+
+                img{
+                    
+                }
+            }
+        }
+        
+
+        
+
+    }
+}

@@ -7,154 +7,397 @@
     <title>IT Website</title>
     <link rel="stylesheet" href="/src/assets/styles/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Мобильное меню -->
-    <div class="mobile-menu-content" id="mobileMenu">
-        <div class="mobile-menu-close" id="closeMenu">
-            <i class="fas fa-times"></i>
+    <!-- Мобильное меню (ваша структура с улучшениями) -->
+    <div class="mobile-menu_content" id="mobileMenu">
+        <div class="mobile-menu_wrapper">
+            <div class="mobile-menu_cross" id="closeMenu">
+                <img src="/src/assets/icons/close.png" alt="close">
+            </div>
+            <div class="mobile-menu_logo">
+                <img src="/src/assets/icons/itweb.png" alt="logo">
+            </div>
+            <nav class="mobile-menu_menu">
+                <a href="#" class="mobile-menu_menu-item">Services</a>
+                <a href="#" class="mobile-menu_menu-item">Media</a>
+                <a href="#" class="mobile-menu_menu-item">Cases</a>
+                <a href="#" class="mobile-menu_menu-item">FAQ</a>
+                <a href="#" class="mobile-menu_menu-item">Contacts</a>
+            </nav>
+            <div class="mobile-menu_contact-info">
+                <a href="#" class="mobile-phones">+7 (111) 111 11 11</a>
+                <a href="#" class="mobile-phones">+7 (111) 111 11 11</a>
+                <a href="#" class="mobile-email">itcompany@mail.com</a>
+            </div>
         </div>
-        <nav class="mobile-nav">
+    </div>
+
+    <header>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="logo">IT WEBSITE</div>
+        
+        <nav>
             <a href="#">Services</a>
             <a href="#">Media</a>
             <a href="#">Cases</a>
             <a href="#">FAQ</a>
             <a href="#">Contacts</a>
         </nav>
-        <div class="mobile-contact-info">
-            <a href="tel:+71111111111">
-                <i class="fas fa-phone"></i> +7 (111) 111 11 11
-            </a>
-            <a href="tel:+71111111111">
-                <i class="fas fa-phone"></i> +7 (111) 111 11 11
-            </a>
-            <a href="mailto:itcompany@mail.com">
-                <i class="fas fa-envelope"></i> itcompany@mail.com
-            </a>
-        </div>
-    </div>
-
-    <header class="navbar">
-        <div class="mobile-menu-icon" id="openMenu">
-            <i class="fas fa-bars"></i>
-        </div>
-        
-        <a class="logo" href="#">IT WEBSITE</a>
-        
-        <nav>
-            <ul>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Media</a></li>
-                <li><a href="#">Cases</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </nav>
         
         <div class="contact-info">
-            <span><i class="fas fa-phone"></i> +7 (111) 111 11 11</span>
-            <span><i class="fas fa-phone"></i> +7 (111) 111 11 11</span>
-            <span><i class="fas fa-envelope"></i> itcompany@mail.com</span>
+            <div class="phones">
+                <a href="#"><i class="fas fa-phone-alt"></i> +7 (111) 111 11 11</a>
+                <a href="#">+7 (111) 111 11 11</a>
+            </div>
+            <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i> itcompany@mail.com</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <section class="main-section">
-            <article class="main-page-info">
-                <h1>Development of <span class="highlight">mobile</span> <span class="highlight">applications</span> and
-                    <span class="highlight">web services</span> of any complexity
-                </h1>
-                <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of
-                    your customers' devices.</p>
-            </article>
-
-            <div class="form-container">
-                <p>Leave your contacts, and we will call you back within 30 minutes</p>
-                <form>
-                    <div>
-                        <label for="phone">Phone number</label>
-                        <input type="text" id="phone" placeholder="Enter your phone number" class="input-field" required>
+        <!-- Первый блок с анимацией фона -->
+        <section class="intro">
+            <div class="text">
+                <h1>Development of <span class="blue">mobile applications</span> and <span class="blue">web services</span> of any complexity</h1>
+                <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
+                <div class="form">
+                    <div class="intro-title-container">
+                        <h3 class="intro-title">Leave your contacts and we will call you back within 30 minutes</h3>
                     </div>
-
-                    <div>
-                        <label for="name">Full name</label>
-                        <input type="text" id="name" placeholder="Enter your name" class="input-field" required>
+                    <div class="form-elements">
+                        <div>
+                            <label for="phone">Phone</label>
+                            <input id="phone" type="text" />
+                        </div>
+                        <div>
+                            <label for="name">Name</label>
+                            <input id="name" type="text" />
+                        </div>
+                        <button>Get consultation</button>
                     </div>
-                    <button type="submit" class="btn-submit">Get consultation</button>
-                </form>
+                </div>
+            </div>
+
+            <!-- Анимированный фон (из образцового решения) -->
+            <div class="images">
+                <div class="image-container-first"></div>
+                <div class="image-container-second"></div>
             </div>
         </section>
 
-        <!-- Development Cycle -->
+        <!-- Development Cycle (ваша структура) -->
         <section class="development-cycle">
-            <h2>Full development cycle</h2>
-            <div class="dev-content">
-                <div class="dev-left">
-                    <p>We use proven technologies</p>
-                    <h3>Web</h3>
-                    <p>
-                        PHP <span>/</span> Javascript <span>/</span> NodeJS <span>/</span> Web Socket <span>/</span>
-                        Socket.io <span>/</span> Vue.js <span>/</span> Nuxt <span>/</span> MySQL <span>/</span>
-                        Laravel <span>/</span> GOlang <span>/</span> django <span>/</span> Python
-                    </p>
-                    <h3>Mobile</h3>
-                    <p>
-                        Swift <span>/</span> Kotlin <span>/</span> Alamofire <span>/</span> Firebase <span>/</span>
-                        CoreData <span>/</span> Realm <span>/</span> Room <span>/</span>
-                        Coroutines <span>/</span> RxJava <span>/</span> RxSwift <span>/</span> Unit Test
-                        <span>/</span> Navigation
-                    </p>
+            <div class="container">
+                <div class="content">
+                    <div class="left">
+                        <div class="dev-cycle_title">
+                            <h1>Full development cycle</h1>
+                            <p>We use proven technologies</p>
+                        </div>
+                        <div class="two_types">
+                            <div class="web">
+                                <h3>Web</h3>
+                                <p>
+                                    PHP <span class="blue">/</span> Javascript <span class="blue">/</span> NodeJS
+                                    <span class="blue">/</span> Web Socket <span class="blue">/</span>
+                                    Socket.io <span class="blue">/</span> Vue.js <span class="blue">/</span> Nuxt
+                                    <span class="blue">/</span> MySQL <span class="blue">/</span>
+                                    Laravel <span class="blue">/</span> GOlang <span class="blue">/</span> django <span class="blue">/</span> Python
+                                </p>
+                            </div>
+                            <div class="mobile">
+                                <h3>Mobile</h3>
+                                <p>
+                                    Swift <span class="blue">/</span> Kotlin <span class="blue">/</span> Alamofire
+                                    <span class="blue">/</span> Firebase <span class="blue">/</span>
+                                    CoreData <span class="blue">/</span> Realm <span class="blue">/</span> Room <span class="blue">/</span>
+                                    Coroutines <span class="blue">/</span> RxJava <span class="blue">/</span> RxSwift
+                                    <span class="blue">/</span> Unit Test <span class="blue">/</span> Navigation
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="#">iOS development</a></li>
+                            <li><a href="#">Android development</a></li>
+                            <li><a href="#">Web development</a></li>
+                            <li><a href="#">UI/UX design</a></li>
+                            <li><a href="#">Testing</a></li>
+                            <li><a href="#">Launch</a></li>
+                            <li><a href="#">IT consulting</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dev-right">
+            </div>
+        </section>
+
+        <!-- Секция Projects (из образцового решения) -->
+        <section class="projects container">
+            <article class="projects-header">
+                <h1>Developed more than <span class="blue">100</span> projects in <span class="blue">15</span> industries</h1>
+            </article>
+            
+            <div class="projects-lists">
+                <div class="theme-left">
                     <ul>
-                        <li><a href="#">iOS development</a></li>
-                        <li><a href="#">Android development</a></li>
-                        <li><a href="#">Web development</a></li>
-                        <li><a href="#">UI/UX design</a></li>
-                        <li><a href="#">Testing</a></li>
-                        <li><a href="#">Launch</a></li>
-                        <li><a href="#">IT consulting</a></li>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/phone-little.png" alt="phone-icon">
+                            </div>
+                            <li>Social media</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/ball.png" alt="ball">
+                            </div>
+                            <li>Fitness and sport</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/court.png" alt="court">
+                            </div>
+                            <li>Bank</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/constr.png" alt="Construction">
+                            </div>
+                            <li>Construction</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/game.png" alt="gamepad">
+                            </div>
+                            <li>Game projects</li>
+                        </div>
+                    </ul>
+                </div>
+                
+                <div class="theme-center">
+                    <ul>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/ed.png" alt="ed">
+                            </div>
+                            <li>Education</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/au.png" alt="auto">
+                            </div>
+                            <li>Auto, transport</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/med.png" alt="medicine">
+                            </div>
+                            <li>Medicine, health</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/rest.png" alt="food">
+                            </div>
+                            <li>Restaurants, food delivery</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/marketplace.png" alt="market">
+                            </div>
+                            <li>Marketplaces</li>
+                        </div>
+                    </ul>
+                </div>
+                
+                <div class="theme-right">
+                    <ul>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/AR.png" alt="AR">
+                            </div>
+                            <li>AR technology</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/TV.png" alt="TV">
+                            </div>
+                            <li>TV series</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/Start.png" alt="startups">
+                            </div>
+                            <li>Startups</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/magic.png" alt="religion">
+                            </div>
+                            <li>Religion</li>
+                        </div>
+                        <div class="icon-list">
+                            <div class="white-circle">
+                                <img src="/src/assets/icons/online.png" alt="courses">
+                            </div>
+                            <li>Online courses</li>
+                        </div>
                     </ul>
                 </div>
             </div>
+
+            <!-- Проект I-teka -->
+            <section class="project-example">
+                <article class="project-text">
+                    <div class="project-text_container">
+                        <h1>Projects we are proud of</h1>
+                        <p>Our software development company is truly proud of the wonderful clients we have worked with. We enjoy a long-term partnership</p>
+                    </div>
+                </article>
+                
+                <article class="I-teka">
+                    <div class="I-teka_container">
+                        <nav>
+                            <a href="#">I-teka</a>
+                            <a href="#">Dauletten</a>
+                            <a href="#">Guru Bosh</a>
+                            <a href="#">Santo</a>
+                            <a href="#">Home Credit Bank</a>
+                            <a href="#">BI Partners</a>
+                            <a href="#">Europharma</a>
+                        </nav>
+                        <div class="button_I-teka">
+                            <button>View 100 more projects</button>
+                        </div>
+                    </div>
+                    
+                    <div class="I-teka_main">
+                        <div class="I-teka_main-info">
+                            <h1>I-teka</h1>
+                            <div class="I-teka_main-info-desc">
+                                <p>The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the application helped many people, which gives more value.</p>
+                                
+                                <nav>
+                                    <a href="#">Business analysis</a>
+                                    <a href="#">iOS</a>
+                                    <a href="#">Android</a>
+                                    <a href="#">QA</a>
+                                    <a href="#">UI/UX Design</a>
+                                </nav>
+                                
+                                <div class="icons-labels">
+                                    <div class="kazah">
+                                        <div class="image_i-teka_wrapper">
+                                            <img src="/src/assets/icons/geo.png" alt="geo">
+                                        </div>
+                                        <p>Kazakhstan</p>
+                                    </div>
+                                    <div class="medicine">
+                                        <div class="image_i-teka_wrapper">
+                                            <img src="/src/assets/icons/bag.png" alt="medicine">
+                                        </div>
+                                        <p>Medicine</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="user-numbers">
+                                    <div class="user_growth">
+                                        <p class="numbers">400%</p>
+                                        <p class="numbers-label">User Growth</p>
+                                    </div>
+                                    <div class="active_users">
+                                        <p class="numbers">+ 200 000</p>
+                                        <p class="numbers-label">Active Users</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="store-images">
+                                    <button class="AppStore">
+                                        <img src="/src/assets/img/AppStore.png" alt="AppStore">
+                                    </button>
+                                    <button class="GooglePlay">
+                                        <img src="/src/assets/img/GooglePlay.png" alt="GooglePlay">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="I-teka_main-img">
+                            <img src="/src/assets/img/i-teka.png" alt="I-teka image">
+                        </div>
+                    </div>
+                </article>
+            </section>
         </section>
     </main>
 
-    <footer class="footer">
-        <h2>IT WEBSITE</h2>
-        <div class="footer-content">
-            <div class="icon">
-                <i class="fas fa-phone"></i> Contact nums
-                <div>+7 (778) 395 90 26</div>
+    <!-- Футер (ваша структура с улучшениями) -->
+    <footer>
+        <div class="footer">
+            <h1>IT WEBSITE</h1>
+            <div class="content">
+                <div>
+                    <p class="light-gray"><i class="fas fa-phone-alt"></i> Contact nums</p>
+                    <p>+7 (778) 395 90 26</p>
+                </div>
+                <div>
+                    <p class="light-gray"><i class="fas fa-envelope"></i> Post</p>
+                    <p>mail@mail.com</p>
+                </div>
+                <div>
+                    <p class="light-gray"><i class="fas fa-map-marker-alt"></i> Address</p>
+                    <p>City, Street, 90</p>
+                </div>
+                <div>
+                    <p class="light-gray"><i class="fas fa-file-alt"></i> Leave a request</p>
+                    <p>Submit your inquiry</p>
+                </div>
             </div>
-            <div class="icon">
-                <i class="fas fa-envelope"></i> Post
-                <div>mail@mail.com</div>
+            <div class="bottom">
+                <i class="fas fa-globe"></i>
+                <p>We work worldwide</p>
             </div>
-            <div class="icon">
-                <i class="fas fa-map-marker-alt"></i> Address
-                <div>City, Street, 90</div>
-            </div>
-            <div class="icon">
-                <i class="fas fa-file-alt"></i> Leave a request
-                <div>Submit your inquiry</div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <i class="fas fa-globe"></i> We work worldwide
         </div>
     </footer>
 
+    <!-- JavaScript для мобильного меню -->
     <script>
-        // JavaScript для мобильного меню
-        document.getElementById('openMenu').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.add('active');
-        });
-        
-        document.getElementById('closeMenu').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.remove('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.querySelector('.menu-icon i');
+            const mobileMenu = document.querySelector('.mobile-menu_content');
+            const closeButton = document.querySelector('.mobile-menu_cross');
+            
+            if (menuIcon && mobileMenu && closeButton) {
+                // Открытие меню
+                menuIcon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileMenu.style.display = 'block';
+                });
+                
+                // Закрытие меню при клике на крестик
+                closeButton.addEventListener('click', function() {
+                    mobileMenu.style.display = 'none';
+                });
+                
+                // Закрытие меню при клике вне его области
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+                        mobileMenu.style.display = 'none';
+                    }
+                });
+                
+                // Закрытие меню при нажатии Escape
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        mobileMenu.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
 </body>

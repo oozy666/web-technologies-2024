@@ -1,0 +1,79 @@
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+
+  .text {
+    margin-top: 75px;
+    width: 50%;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      width: 90%;
+    }
+  }
+
+  .images {
+    position: absolute; /* Убираем из потока */
+    top: 0;
+    right: -250px;
+    bottom: 0;
+    width: 50%;
+    height: 1960px;
+    display: flex;
+    justify-content: space-between;
+    z-index: -1;
+    transform: rotate(-15deg);
+
+    .image-container-first, .image-container-second {
+      position: absolute;
+      top: 0;
+      width: 48%;
+      height: 100%; 
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: top;
+      }
+
+    .image-container-first {
+      left:0;
+      background-image: url("/src/assets/img/column-left.webp");
+      animation: bg-animation-backward 17s linear infinite;
+    }
+
+    .image-container-second {
+      right:0;
+      background-image: url("/src/assets/img/column-right.webp");
+      animation: bg-animation-forward 17s linear infinite;
+    }
+  }
+
+  @keyframes bg-animation-forward {
+    0% {
+      transform: translateY(-50%)
+    }
+    100% {
+      transform: translateY(0%)
+    }
+  }
+
+  @keyframes bg-animation-backward {
+    0% {
+      transform: translateY(0%)
+    }
+    100% {
+      transform: translateY(-50%)
+    }
+  }
+}
+
+.intro .text p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  width: 90%;
+}
