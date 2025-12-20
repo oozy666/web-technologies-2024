@@ -4,14 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THOUSAND</title>
+    <title>IT Website</title>
     <link rel="stylesheet" href="/src/assets/styles/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Мобильное меню (скрыто по умолчанию) -->
+    <div class="mobile-menu-content" id="mobileMenu">
+        <div class="mobile-menu-close" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#">Services</a>
+            <a href="#">Media</a>
+            <a href="#">Cases</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contacts</a>
+        </nav>
+        <div class="mobile-contact-info">
+            <a href="tel:+71111111111">
+                <i class="fas fa-phone"></i> +7 (111) 111 11 11
+            </a>
+            <a href="tel:+71111111111">
+                <i class="fas fa-phone"></i> +7 (111) 111 11 11
+            </a>
+            <a href="mailto:itcompany@mail.com">
+                <i class="fas fa-envelope"></i> itcompany@mail.com
+            </a>
+        </div>
+    </div>
+
     <header class="navbar">
-        <div class="logo"><a href="#">THOUSAND</a></div>
+        <div class="mobile-menu-icon" id="openMenu">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <a class="logo" href="#">IT WEBSITE</a>
+        
         <nav>
             <ul>
                 <li><a href="#">Services</a></li>
@@ -21,10 +52,11 @@
                 <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
+        
         <div class="contact-info">
             <span><i class="fas fa-phone"></i> +7 (111) 111 11 11</span>
-            <span><i class="fas fa-phone" style="margin-left:15px"></i> +7 (111) 111 11 11</span>
-            <span><i class="fas fa-envelope" style="margin-left:20px"></i> thousand@mail.com</span>
+            <span><i class="fas fa-phone"></i> +7 (111) 111 11 11</span>
+            <span><i class="fas fa-envelope"></i> itcompany@mail.com</span>
         </div>
     </header>
 
@@ -35,22 +67,57 @@
                     <span class="highlight">web services</span> of any complexity
                 </h1>
                 <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of
-                    your customets' devices.</p>
+                    your customers' devices.</p>
             </article>
 
             <div class="form-container">
                 <p>Leave your contacts, and we will call you back within 30 minutes</p>
                 <form>
-                    <div class="field">
+                    <div>
                         <label for="phone">Phone number</label>
-                        <input type="tel" placeholder="Enter your phone number" class="input-field">
+                        <input type="text" id="phone" placeholder="Enter your phone number" class="input-field" required>
                     </div>
-                    <div class="field">
+
+                    <div>
                         <label for="name">Full name</label>
-                        <input type="text" id="name" placeholder="Enter your name" class="input-field">
+                        <input type="text" id="name" placeholder="Enter your name" class="input-field" required>
                     </div>
-                    <button class="btn-submit" type="submit">Get consultation</button>
+                    <button type="submit" class="btn-submit">Get consultation</button>
                 </form>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: Development Cycle -->
+        <section class="development-cycle">
+            <h2>Full development cycle</h2>
+            <div class="dev-content">
+                <div class="dev-left">
+                    <p>We use proven technologies</p>
+                    <h3>Web</h3>
+                    <p>
+                        PHP <span>/</span> Javascript <span>/</span> NodeJS <span>/</span> Web Socket <span>/</span>
+                        Socket.io <span>/</span> Vue.js <span>/</span> Nuxt <span>/</span> MySQL <span>/</span>
+                        Laravel <span>/</span> GOlang <span>/</span> django <span>/</span> Python
+                    </p>
+                    <h3>Mobile</h3>
+                    <p>
+                        Swift <span>/</span> Kotlin <span>/</span> Alamofire <span>/</span> Firebase <span>/</span>
+                        CoreData <span>/</span> Realm <span>/</span> Room <span>/</span>
+                        Coroutines <span>/</span> RxJava <span>/</span> RxSwift <span>/</span> Unit Test
+                        <span>/</span> Navigation
+                    </p>
+                </div>
+                <div class="dev-right">
+                    <ul>
+                        <li><a href="#">iOS development</a></li>
+                        <li><a href="#">Android development</a></li>
+                        <li><a href="#">Web development</a></li>
+                        <li><a href="#">UI/UX design</a></li>
+                        <li><a href="#">Testing</a></li>
+                        <li><a href="#">Launch</a></li>
+                        <li><a href="#">IT consulting</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
@@ -79,6 +146,16 @@
             <i class="fas fa-globe"></i> We work worldwide
         </div>
     </footer>
-</body>
 
+    <script>
+        // JavaScript для мобильного меню (простой вариант)
+        document.getElementById('openMenu').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('active');
+        });
+        
+        document.getElementById('closeMenu').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+        });
+    </script>
+</body>
 </html>
