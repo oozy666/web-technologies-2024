@@ -1,5 +1,5 @@
 .projects{
-
+    overflow: hidden;
     h1{
         font-size: 36px;
         font-weight: 700;
@@ -244,12 +244,6 @@
                             flex-direction: row;
                             gap:8px;
                             align-items: center;
-
-                            p{
-
-                            }
-
-                            
                         }
 
                         .kazah{
@@ -330,16 +324,9 @@
             .I-teka_main-img{
                 justify-self: center;
                 width: 50%;
+                height: auto;
                 align-self: center;
-
-                img{
-                    
-                }
             }
         }
-        
-
-        
-
     }
 }

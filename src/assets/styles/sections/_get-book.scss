@@ -1,0 +1,129 @@
+.resource-section {
+  overflow: hidden;
+  margin-top: 0;
+  background-color: #2d66ee;
+
+  .resource-outer {
+    width: 100%;
+  }
+
+  .resource-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-around;
+
+    .resource-details {
+      display: flex;
+      flex-direction: column;
+      margin: 80px 0 80px 108px;
+      gap: 20px;
+      width: 50%;
+
+      .resource-title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 51.84px;
+        letter-spacing: 0.32645100355148315px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        margin: 0;
+        color: white;
+      }
+
+      .resource-form {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        .form-inputs {
+          .input-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 400;
+            color: #888;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+          }
+
+          .input-field {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 8px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+          }
+
+          .input-field::placeholder {
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: -0.40799999237060547px;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+            transform: translateY(-1px);
+            color: black;
+          }
+
+          .name-phone-row {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            padding: 16px 0;
+
+            .half-width {
+              width: 50%;
+            }
+          }
+
+          .email-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 16px 0 14px 0;
+          }
+        }
+
+        .form-submit {
+          width: 40%;
+          padding: 11px 24px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          align-self: flex-end;
+          white-space: normal;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: -0.15399999916553497px;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+
+    .resource-image {
+      display: flex;
+      width: 50%;
+      align-self: center;
+      margin: 0 108px 0 0;
+      padding: 34px 0 0 25px;
+
+      .resource-visual {
+        position: relative;
+        width: 330px;
+        height: auto;
+        left: 128px;
+        align-self: center;
+      }
+    }
+  }
+}

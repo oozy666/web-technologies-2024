@@ -1,0 +1,64 @@
+.process-overview {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 80px 108px;
+
+  .section-title {
+    width: 50%;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 51.84px;
+    letter-spacing: 0.32645100355148315px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin: 0 0 34px;
+  }
+
+  .dual-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 48%;
+
+      .step-card {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 392px;
+        height: 184px;
+
+        .card-top {
+          display: flex;
+          flex-direction: row;
+          gap: 24px;
+          align-items: center;
+          padding: 24px 0 0 24px;
+
+          .step-icon {
+            width: 48px;
+            height: 48px;
+            padding: 1.5px 3px;
+          }
+        }
+
+        .card-description {
+          padding: 0 24px 4px;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: -0.23999999463558197px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+  }
+}

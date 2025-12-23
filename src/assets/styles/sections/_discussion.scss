@@ -1,0 +1,94 @@
+.dialog-section {
+  overflow: hidden;
+  margin-top: 0;
+  background-color: #2d66ee;
+
+  .dialog-wrapper {
+    padding: 80px 108px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 50%;
+
+    .section-header {
+      width: 50%;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 51.84px;
+      letter-spacing: 0.32645100355148315px;
+      color: white;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin: 0;
+    }
+
+    .section-description {
+      width: 58%;
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 20px;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin: 0;
+    }
+  }
+
+  .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    .fields-row {
+      display: flex;
+      flex-direction: row;
+      gap: 62px;
+
+      .field-group {
+        width: 274px;
+        padding: 12px 0;
+      }
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 400;
+      color: #888;
+      font-size: 16px;
+    }
+
+    .field-input {
+      width: 90%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .submit-button {
+      width: 35%;
+      text-align: center;
+      padding: 10px;
+      margin: 20px 20px 0 0;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      align-self: flex-end;
+      line-height: 1.5;
+      white-space: normal;
+    }
+  }
+}

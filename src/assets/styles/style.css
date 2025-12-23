@@ -752,3 +752,693 @@ header .menu-icon:active .mobile-menu_content {
   width: 50%;
   align-self: center;
 }/*# sourceMappingURL=style.css.map */
+
+
+
+.contact-project {
+  overflow: hidden;
+  margin-top: 0px;
+  background-color: #2D66EE;
+}
+.contact-project .contact-project-wrapper {
+  padding: 80px 40px 80px 40px;
+  display: flex;
+  flex-direction: row;
+}
+.contact-project .contact-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 50%;
+}
+.contact-project .contact-text-block h2 {
+  width: 50%;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 51.84px;
+  letter-spacing: 0.3264510036px;
+  color: white;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+.contact-project .contact-text-block p {
+  width: 58%;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+.contact-project .contact-form-block {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-project .contact-form-block .contact-input-row {
+  display: flex;
+  flex-direction: row;
+  gap: 62px;
+}
+.contact-project .contact-form-block .contact-input-row .input-field {
+  width: 274px;
+  padding: 12px 0 12px 0;
+}
+.contact-project .contact-form-block label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #888;
+  font-size: 16px;
+}
+.contact-project .contact-form-block input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+}
+.contact-project .contact-form-block .contact-submit-btn {
+  width: 35%;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 20px 0 0;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  align-self: flex-end;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.development-stages {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 80px 40px 80px 40px;
+}
+.development-stages .stages-title {
+  width: 50%;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 51.84px;
+  letter-spacing: 0.3264510036px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0 0 34px 0;
+}
+.development-stages .stages-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+}
+.development-stages .stages-grid .stage-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 184px;
+  margin-bottom: 24px;
+}
+.development-stages .stages-grid .stage-card .stage-heading {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 0 0 24px;
+}
+.development-stages .stages-grid .stage-card .stage-heading img {
+  width: 48px;
+  height: 48px;
+}
+.development-stages .stages-grid .stage-card p {
+  padding: 0 24px 4px 24px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.2399999946px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.team-section {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.team-section .team-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.team-section .team-description {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0px 80px 40px;
+  gap: 32px;
+  width: 50%;
+}
+.team-section .team-description h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 51.84px;
+  letter-spacing: 0.3264510036px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+.team-section .team-description .team-intro {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.2399999946px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+.team-section .team-description .team-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.team-section .team-description .team-stats .stat-item {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.team-section .team-description .team-stats .stat-item .stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 69.12px;
+  letter-spacing: 0.3264510036px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0px;
+}
+.team-section .team-description .team-stats .stat-item .stat-label {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.2399999946px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0px;
+  color: #667085;
+}
+.team-section .team-description .team-note {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.2399999946px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+.team-section .team-image {
+  margin: 80px 40px 80px 0px;
+  position: relative;
+  width: 50%;
+  height: auto;
+}
+.team-section .team-image img {
+  box-shadow: 0px 20px 30px -10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+}
+.team-section .team-image .play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 35px;
+}
+
+.ebook-section {
+  overflow: hidden;
+  margin-top: 0px;
+  background-color: #2D66EE;
+}
+.ebook-section .ebook-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: space-around;
+}
+.ebook-section .ebook-content {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0 80px 40px;
+  gap: 20px;
+  width: 50%;
+}
+.ebook-section .ebook-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 51.84px;
+  letter-spacing: 0.3264510036px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+  color: white;
+}
+.ebook-section .ebook-content .ebook-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.ebook-section .ebook-content .ebook-form .form-row {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  padding: 16px 0 16px 0;
+}
+.ebook-section .ebook-content .ebook-form .form-row .form-group {
+  width: 50%;
+}
+.ebook-section .ebook-content .ebook-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: #888;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.ebook-section .ebook-content .ebook-form .form-group input {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+.ebook-section .ebook-content .ebook-form .form-group input::placeholder {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.4079999924px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  transform: translateY(-1px);
+  color: black;
+}
+.ebook-section .ebook-content .ebook-form .full-width {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 0 14px 0;
+  width: 100%;
+}
+.ebook-section .ebook-content .ebook-form .ebook-submit {
+  width: 40%;
+  padding: 11px 24px 11px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-end;
+  white-space: normal;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.1539999992px;
+  text-align: center;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.ebook-section .ebook-image {
+  display: flex;
+  width: 50%;
+  align-self: center;
+  margin: 0 40px 0 0;
+  padding: 34px 0px 0px 25px;
+}
+.ebook-section .ebook-image img {
+  position: relative;
+  width: 330px;
+  height: auto;
+  left: 128px;
+  align-self: center;
+}
+
+.faq-section {
+  overflow: hidden;
+  background-color: white;
+}
+.faq-section .faq-container {
+  padding: 80px 40px 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.faq-section .faq-container .faq-main-title {
+  width: 50%;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 51.84px;
+  letter-spacing: 0.3264510036px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  margin: 0;
+}
+.faq-section .faq-container .faq-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.faq-section .faq-container .faq-columns .faq-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.faq-section .faq-container .faq-columns .faq-column .faq-item {
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+.faq-section .faq-container .faq-columns .faq-column .faq-item .faq-question {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 0 16px 0;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-section .faq-container .faq-columns .faq-column .faq-item .faq-question span {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.3799999952px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  align-self: center;
+}
+.faq-section .faq-container .faq-columns .faq-column .faq-item .faq-question img {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 769px) {
+  .contact-project .contact-project-wrapper {
+    padding: 22px 20px 32px 20px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .contact-project .contact-text-block h2 {
+    width: 75%;
+    font-size: 28px;
+    line-height: 40.32px;
+  }
+  .contact-project .contact-text-block p {
+    width: 95%;
+    font-size: 12px;
+  }
+  .contact-project .contact-form-block {
+    width: 600px;
+    height: 190px;
+    gap: 18px;
+  }
+  .contact-project .contact-form-block .contact-submit-btn {
+    margin: 0;
+    padding: 12px;
+  }
+  
+  .development-stages {
+    padding: 32px 20px;
+  }
+  .development-stages .stages-title {
+    width: 100%;
+    font-size: 28px;
+    line-height: 40.32px;
+    margin-bottom: 44px;
+  }
+  .development-stages .stages-grid {
+    flex-direction: column;
+  }
+  .development-stages .stages-grid .stage-card {
+    width: 673px;
+    height: 172px;
+    padding: 24px;
+  }
+  .development-stages .stages-grid .stage-card .stage-heading {
+    padding: 0;
+  }
+  .development-stages .stages-grid .stage-card p {
+    width: 75%;
+    margin-top: 16px;
+    padding: 0;
+    font-size: 14px;
+  }
+  
+  .team-section {
+    flex-direction: column;
+    padding: 38px 20px 52px 20px;
+  }
+  .team-section .team-content {
+    flex-direction: column;
+  }
+  .team-section .team-description {
+    margin: 0;
+    width: 100%;
+  }
+  .team-section .team-description h2 {
+    font-size: 28px;
+    line-height: 40.32px;
+  }
+  .team-section .team-description .team-intro {
+    width: 65%;
+  }
+  .team-section .team-description .team-stats {
+    position: relative;
+    padding: 0 60px 0 30px;
+    top: 498px;
+  }
+  .team-section .team-image {
+    margin: 0;
+    bottom: 192px;
+    width: 100%;
+  }
+  .team-section .team-image .play-overlay {
+    width: 10%;
+  }
+  
+  .ebook-section .ebook-container {
+    justify-content: space-evenly;
+  }
+  .ebook-section .ebook-content {
+    margin: 76px 0 84px 20px;
+  }
+  .ebook-section .ebook-content h2 {
+    width: 150%;
+    font-size: 28px;
+    line-height: 40.32px;
+  }
+  .ebook-section .ebook-content .ebook-form .form-row {
+    flex-direction: column;
+  }
+  .ebook-section .ebook-content .ebook-form .ebook-submit {
+    width: auto;
+    align-self: self-start;
+  }
+  .ebook-section .ebook-image {
+    margin: 0;
+  }
+  .ebook-section .ebook-image img {
+    width: 240px;
+    height: 340px;
+    left: 50px;
+    top: 20px;
+  }
+  
+  .faq-section .faq-container {
+    padding: 22px 20px 32px 20px;
+  }
+  .faq-section .faq-container .faq-columns {
+    flex-direction: column;
+    gap: 0;
+    margin-left: 34px;
+  }
+  .faq-section .faq-container .faq-columns .faq-column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .contact-project .contact-project-wrapper {
+    padding: 34px 16px 55px 16px;
+  }
+  .contact-project .contact-text-block {
+    width: 100%;
+    gap: 0;
+  }
+  .contact-project .contact-text-block h2 {
+    width: 75%;
+    font-size: 28px;
+    line-height: 40.32px;
+  }
+  .contact-project .contact-text-block p {
+    width: 95%;
+    font-size: 12px;
+  }
+  .contact-project .contact-form-block {
+    width: 393px;
+    height: 300px;
+    padding: 36px 18px 36px 17px;
+    flex-direction: column;
+  }
+  .contact-project .contact-form-block .contact-input-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contact-project .contact-form-block .contact-submit-btn {
+    align-self: center;
+    margin: 0;
+    padding: 12px;
+    width: 80%;
+  }
+  
+  .development-stages {
+    padding: 32px 16px 20px 16px;
+  }
+  .development-stages .stages-title {
+    width: 100%;
+    font-size: 28px;
+    line-height: 40.32px;
+    margin-bottom: 44px;
+  }
+  .development-stages .stages-grid .stage-card {
+    width: 394px;
+    padding: 24px;
+  }
+  .development-stages .stages-grid .stage-card .stage-heading h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .development-stages .stages-grid .stage-card p {
+    width: 75%;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  
+  .team-section {
+    width: 426px;
+    height: 646px;
+    padding: 38px 16px 52px 16px;
+  }
+  .team-section .team-description .team-intro {
+    width: 90%;
+  }
+  .team-section .team-description .team-stats {
+    top: 230px;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+  .team-section .team-description .team-stats .stat-item .stat-number {
+    font-size: 28px;
+  }
+  .team-section .team-image {
+    top: -250px;
+  }
+  .team-section .team-image .play-overlay {
+    width: 10%;
+  }
+  
+  .ebook-section {
+    width: 428px;
+    height: 923px;
+  }
+  .ebook-section .ebook-container {
+    flex-direction: column;
+    padding: 45px;
+  }
+  .ebook-section .ebook-content {
+    margin: 0;
+    width: 100%;
+  }
+  .ebook-section .ebook-content h2 {
+    width: 100%;
+    font-size: 28px;
+    line-height: 40.32px;
+  }
+  .ebook-section .ebook-content .ebook-form {
+    width: 335px;
+    height: 431px;
+    padding: 32px;
+    gap: 32px;
+    top: 300px;
+    position: relative;
+  }
+  .ebook-section .ebook-content .ebook-form .form-row {
+    flex-direction: column;
+  }
+  .ebook-section .ebook-content .ebook-form .ebook-submit {
+    width: 100%;
+    align-self: self-start;
+  }
+  .ebook-section .ebook-image img {
+    width: 190px;
+    height: auto;
+    top: -480px;
+    left: -30px;
+  }
+  
+  .faq-section .faq-container {
+    padding: 32px 16px;
+  }
+  .faq-section .faq-container .faq-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+  .faq-section .faq-container .faq-columns .faq-column {
+    width: 100%;
+  }
+}

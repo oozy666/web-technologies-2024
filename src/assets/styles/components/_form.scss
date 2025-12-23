@@ -1,53 +1,68 @@
-// components/_form.scss
-.form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
+.input-panel {
+  $panel-background: #fff;
+  $panel-padding: 20px;
+  $panel-radius: 8px;
+  $panel-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  $heading-width: 70%;
+  $heading-size: 20px;
+  $field-label-color: #888;
+  $field-label-size: 16px;
+  $input-width: 75%;
+  $input-padding: 10px;
+  $input-border-color: #ddd;
+  $action-button-color: #007bff;
+  $action-text-color: #fff;
+  $action-button-width: 15%;
+  $action-margin-top: 20px;
+  $action-margin-right: 20px;
   
-    h3 {
-      width: 70%;
-      font-size: 20px;
-    }
+  background: $panel-background;
+  padding: $panel-padding;
+  border-radius: $panel-radius;
+  box-shadow: $panel-shadow;
+  width: 100%;
   
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 400;
-      color: #888;
-      font-size: 16px;
-    }
-  
-    input {
-      width: 75%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: none;
-      border-bottom: 1px solid #ddd;
-      border-radius: 4px;
-    }
-  
-    button {
-      width: 15%;
-      text-align: left;
-      padding: 10px;
-      margin: 20px 20px 0 0;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      align-content: flex-start;
-      line-height: 1.5;
-      white-space: normal;
-    }
-  
-    .form-elements {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  .panel-heading {
+    width: $heading-width;
+    font-size: $heading-size;
   }
   
+  .field-caption {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: $field-label-color;
+    font-size: $field-label-size;
+  }
+  
+  .data-entry {
+    width: $input-width;
+    padding: $input-padding;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid $input-border-color;
+    border-radius: 4px;
+  }
+  
+  .submit-action {
+    width: $action-button-width;
+    text-align: left;
+    padding: $input-padding;
+    margin: $action-margin-top $action-margin-right 0 0;
+    background-color: $action-button-color;
+    color: $action-text-color;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-content: flex-start;
+    line-height: 1.5;
+    white-space: normal;
+  }
+  
+  .fields-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

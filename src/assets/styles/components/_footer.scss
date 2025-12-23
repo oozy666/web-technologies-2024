@@ -1,44 +1,52 @@
-.footer {
-    background-color: #0b1121;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px 40px 20px 40px;
+.page-end {
+  $dark-bg: #0b1121;
+  $light-color: #fff;
+  $spacing-base: 20px;
+  $spacing-wide: 40px;
+  $radius: 10px;
+  $font-large: 24px;
   
-    h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
+  background: $dark-bg;
+  color: $light-color;
+  padding: $spacing-base 0;
+  border-radius: $radius;
+  margin: $spacing-base $spacing-wide;
+  text-align: center;
+  
+  .primary-heading {
+    margin: 0;
+    font: {
+      size: $font-large;
+      weight: 700;
     }
+  }
   
-    .content {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-  
-      div {
-        text-align: left;
-  
-        i {
-          margin-right: 10px;
-        }
-  
-        p {
-          margin: 5px 0;
-        }
-      }
-    }
-  
-    .bottom {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  
-      i {
+  .info-sections {
+    display: flex;
+    margin-top: $spacing-base;
+    justify-content: space-around;
+    
+    .info-block {
+      text-align: left;
+      
+      .icon {
         margin-right: 10px;
+      }
+      
+      .text-line {
+        margin: 5px 0;
       }
     }
   }
   
+  .credits-area {
+    margin-top: $spacing-base;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .credits-icon {
+      margin-right: 10px;
+    }
+  }
+}
