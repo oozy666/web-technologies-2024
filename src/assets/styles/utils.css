@@ -1,9 +1,19 @@
-.bold {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
+.text-center {
+    text-align: center;
 }
 
-.medium {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
 }
