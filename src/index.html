@@ -1,222 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEAT MAKER</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
-  </head>
 
-  <body>
-    <!-- HEADER -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
     <header class="site-header">
-      <a class="site-logo text-color-blue" href="#">BEAT LAB</a>
-      
-      <!-- NAVIGATION -->
-      <nav class="header-nav">
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="#">Биты</a></li>
-          <li class="nav-item"><a href="#">Услуги</a></li>
-          <li class="nav-item"><a href="#">Кейсы</a></li>
-          <li class="nav-item"><a href="#">FAQ</a></li>
-          <li class="nav-item"><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-contacts">
-        <div class="contact-phone">
-          <img class="contact-icon phone-icon" src="/src/assets/icons/phone-plus-svgrepo-com.svg" alt="PhoneIcon" />
-          <p class="contact-info text-color-blue">+7 (495) 123-45-67</p>
-        </div>
-      </div>
+        <img src="assets/images/logo.jpg" alt="Логотип" width="100">
+        
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        
+        <nav class="breadcrumbs">
+            <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__link breadcrumbs__link--active" aria-current="page">Главная</span>
+                </li>
+            </ol>
+        </nav>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main class="main-content">
-      <!-- SECTION: Hero/Description -->
-      <section class="hero-section">
-        <h2 class="description-header header-text">
-          Создание <span class="text-color-blue">уникальных битов</span> и
-          <span class="text-color-blue">продакшн</span> любой сложности
-        </h2>
-        <p class="default-text">
-          Мы создаем продакшен для артистов, которые хотят выделить свой звук среди миллионов других
-        </p>
-      </section>
-
-      <hr />
-
-      <!-- SECTION: Feedback Form -->
-      <section class="feedback-section">
-        <h3 class="feedback-subheader subheader-text">
-          Оставьте контакты и мы обсудим ваш проект<br />в течение 30 минут
-        </h3>
-        <form class="feedback-form" action="" method="">
-          <div class="feedback-field">
-            <label for="feedback-phone" class="form-label">Телефон</label>
-            <div class="feedback-field-phone">
-              <input type="tel" id="feedback-phone" name="feedback-phone" placeholder="+7 (111) 111-11-11" required />
-            </div>
-          </div>
-
-          <div class="feedback-field">
-            <label for="feedback-name" class="form-label">Имя</label>
-            <input type="text" id="feedback-name" name="feedback-name" placeholder="Иван Иванов" required />
-          </div>
-
-          <button type="submit" class="feedback-button">Обсудить проект</button>
-        </form>
-      </section>
-
-      <hr />
-
-      <!-- SECTION: Development Info -->
-      <section class="development-section">
-        <div class="development-technologies">
-          <h2 class="header-text">Полный цикл продакшена</h2>
-          <p class="default-text">Используем профессиональные инструменты</p>
-          <h3 class="subheader-text">DAW</h3>
-          <p class="default-text tech-text">
-            FL Studio / Ableton Live / Logic Pro / Cubase / Pro Tools
-          </p>
-          <h3 class="subheader-text">Оборудование</h3>
-          <p class="default-text tech-text">
-            MIDI-контроллеры / Аудиоинтерфейсы / Студийные мониторы
-          </p>
-        </div>
-        <div class="development-categories">
-          <ul class="development-list">
-            <li class="development-item"><a href="#">Битмейкинг</a></li>
-            <li class="development-item"><a href="#">Аранжировка</a></li>
-            <li class="development-item"><a href="#">Сведение</a></li>
-            <li class="development-item"><a href="#">Мастеринг</a></li>
-            <li class="development-item"><a href="#">Продажа битов</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <hr />
-
-      <!-- SECTION: Projects -->
-      <section class="projects-section">
-        <h2 class="header-text">
-          Создали более <span class="text-color-blue">500</span> битов в
-          <span class="text-color-blue">10+</span> жанрах
-        </h2>
-        <div class="project-list">
-          <div class="project-column">
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Трэп</p>
+        <section class="hero-section">
+            <h1 class="heading-1">Главная страница</h1>
+            <p class="paragraph">Это пример текста для главной страницы нашего веб-сайта.</p>
+        </section>
+        <hr>
+        <section class="advantages-section">
+            <h3 class="heading-3">Наши преимущества</h3>
+            <article class="advantage-card">
+                <h4 class="heading-4">Качество и надежность услуг</h4>
+                <p class="paragraph">Мы предоставляем только лучшие решения для наших клиентов.</p>
             </article>
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Дрилл</p>
-            </article>
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Хип-хоп</p>
-            </article>
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>R&B</p>
-            </article>
-          </div>
-          <div class="project-column">
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Электроника</p>
-            </article>
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Лоу-фай</p>
-            </article>
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Альтернатива</p>
-            </article>
-            <article class="project-item">
-              <img class="project-image" src="/src/assets/icons/heart-beat-svgrepo-com.svg" />
-              <p>Фонк</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <hr />
-
-      <!-- SECTION: Contact Form -->
-      <section class="contact-section">
-        <div class="contact-form__text">
-          <h3 class="header__text text_color_white">Обсудим<br />Ваш трек</h3>
-          <p class="default__text text_color_white">
-            Разберем, как создать мощный звук,<br />стоимость и сроки работы
-          </p>
-        </div>
-        <div class="contact-form__form">
-          <form class="contact__form" action="" method="">
-            <div class="feedback__field">
-              <label for="feedback__phone" class="form__label">Телефон</label>
-              <div class="feedback__field--phone">
-                <input type="tel" id="feedback__phone" name="feedback__phone" placeholder="+7 (111) 111-11-11" required />
-              </div>
-            </div>
-
-            <div class="feedback__field">
-              <label for="feedback__name" class="form__label">Имя</label>
-              <input type="text" id="feedback__name" name="feedback__name" placeholder="Иван Иванов" required />
-            </div>
-
-            <button type="submit" class="contact__button">Обсудить бит</button>
-          </form>
-        </div>
-      </section>
-
-      <hr />
-
-      <!-- SECTION: FAQ -->
-      <section class="faq-section">
-        <div class="faq-container">
-          <h2 class="header-text">FAQ</h2>
-          <div class="faq-questions">
-            <article class="question">
-              <h4 class="stage-header">Сколько стоит создание бита?</h4>
-              <img class="faq-image" src="/src/assets/icons/plus-large-svgrepo-com.svg" alt="open_block" />
-            </article>
-            <article class="question">
-              <h4 class="stage-header">Сколько времени занимает работа?</h4>
-              <img class="faq-image" src="/src/assets/icons/plus-large-svgrepo-com.svg" alt="open_block" />
-            </article>
-            <article class="question">
-              <h4 class="stage-header">Выдаёте ли STEMS-файлы?</h4>
-              <img class="faq-image" src="/src/assets/icons/plus-large-svgrepo-com.svg" alt="open_block" />
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <hr />
+        </section>
+        <hr>
+        <section class="about-section">
+            <h3 class="heading-3">О компании</h3>
+            <p class="paragraph">Наша компания работает много лет на рынке.</p>
+        </section>
+        <hr>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-content">
-        <a href="#" class="footer-logo">BEAT LAB</a>
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="#">Биты</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Кейсы</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </nav>
-        <div class="footer-contacts">
-          <p>+7 (495) 123-45-67</p>
-          <p>beats@lab.com</p>
-          <p>Москва, ул. Звуковая, 10</p>
-        </div>
-      </div>
+    <footer class="site-footer">
+        <section class="footer-contacts">
+            <h3 class="heading-3">Свяжитесь с нами</h3>
+            <p class="paragraph">Мы всегда готовы помочь вам.</p>
+            <hr>
+            <ul>
+                <li class="paragraph">Наши контакты:</li>
+                <li class="paragraph">+7 (123) 456-78-90</li>
+                <li class="paragraph">info@example.com</li>
+            </ul>
+        </section>
+        <p class="paragraph footer-copyright">Все права защищены</p>
+>>>>>>> Stashed changes
     </footer>
   </body>
 </html>
