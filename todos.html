@@ -2,33 +2,40 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axioma Tasks | Управление задачами</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/assets/styles/style.css">
 </head>
 <body>
-<header class="header">
-    <nav class="nav">
-        <a href="/index.html">index</a>
-        <a href="/user.html">user</a>
-        <a href="/logout.html">logout</a>
-    </nav>
-</header>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/index.html">🌟 Axioma<span>Tasks</span></a>
+            </div>
+            <nav class="nav">
+                <a href="/index.html">Главная</a>
+                <a href="/user.html">Профиль</a>
+                <a href="/logout.html">Выйти</a>
+            </nav>
+        </div>
+    </header>
 
-<main class="main">
+    <main class="main">
+        <div class="todo-card">
+            <h2 class="todo-title">Мой список дел</h2>
+            <div class="todo-form">
+                <input type="text" id="todo-input" class="todo-input" placeholder="Запишите новую задачу..." />
+                <button id="todo-submit" class="todo-submit-btn" type="submit">Добавить</button>
+            </div>
+            <ul id="todo-list" class="todo-list"></ul>
+        </div>
+    </main>
 
-</main>
+    <div class="loader-wrapper" data-loading>
+        <img src="./src/assets/icons/loader.svg" alt="" class="loader">
+    </div>
 
-<div class="loader-wrapper" data-loading>
-    <img
-            src="./src/assets/icons/loader.svg"
-            alt=""
-            class="loader"
-    >
-</div>
-
-<script src="src/pages/todos.js" type="module"></script>
+    <script src="src/pages/todos.js" type="module"></script>
 </body>
 </html>
