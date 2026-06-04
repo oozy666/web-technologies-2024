@@ -3,43 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор Пиццы</title>
+    <title>Конструктор Пиццы</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="pizza-calculator-box">
-        <h1>Калькулятор Пиццы</h1>
-        
-        <div class="form-step">
-            <h2>Выберите пиццу:</h2>
-            <select id="basePizza">
-                <option value="">--Выберите пиццу--</option>
-                <option value="Маргарита">Маргарита</option>
-                <option value="Пепперони">Пепперони</option>
-                <option value="Баварская">Баварская</option>
-            </select>
+    <div class="pizza-builder-container">
+        <h1>Сборка заказа</h1>
+
+        <div class="split-workspace">
+            <div class="pizza-left-col">
+                <h2>Выберите пиццу:</h2>
+                <div class="pizza-gallery">
+                    <div class="pizza-thumb" data-type="Маргарита">
+                        <img src="assets/img/марго.avif" alt="Маргарита" class="pizza-img">
+                        <p>Маргарита</p>
+                    </div>
+                    <div class="pizza-thumb" data-type="Пепперони">
+                        <img src="assets/img/пепа.avif" alt="Пепперони" class="pizza-img">
+                        <p>Пепперони</p>
+                    </div>
+                    <div class="pizza-thumb" data-type="Баварская">
+                        <img src="assets/img/бавар.avif" alt="Баварская" class="pizza-img">
+                        <p>Баварская</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pizza-right-col">
+                <div id="sizeContainer">
+                    <h2>Выберите размер:</h2>
+                    <div class="size-toggle-group">
+                        <label class="size-toggle-btn">
+                            <input type="radio" name="size" value="Маленькая">
+                            <span>Маленькая</span>
+                        </label>
+                        <label class="size-toggle-btn">
+                            <input type="radio" name="size" value="Большая">
+                            <span>Большая</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="extrasContainer">
+                    <h2>Добавить по вкусу:</h2>
+                    <div class="extras-gallery">
+                        <div class="extras-thumb" data-topping="сырный борт">
+                            <img src="assets/img/борт.png" alt="Сырный бортик">
+                            <p>Сырный борт</p>
+                        </div>
+                        <div class="extras-thumb" data-topping="сливочная моцарелла">
+                            <img src="assets/img/моц.png" alt="Сливочная моцарелла">
+                            <p>Моцарелла</p>
+                        </div>
+                        <div class="extras-thumb" data-topping="чедер и пармезан">
+                            <img src="assets/img/чедр.png" alt="Чеддер и пармезан">
+                            <p>Чеддер / Пармезан</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="btnAddToCart">
+                    Добавить в корзину за <span id="price">0</span> ₽ (<span id="calories">0</span> ккал)
+                </button>
+            </div>
         </div>
 
-        <div class="form-step is-hidden" id="sizeContainer">
-            <h2>Выберите размер:</h2>
-            <select id="pizzaSize">
-                <option value="">--Выберите размер--</option>
-                <option value="Большая">Большая</option>
-                <option value="Маленькая">Маленькая</option>
-            </select>
-        </div>
-
-        <div class="form-step is-hidden" id="extrasContainer">
-            <h2>Дополнительные топпинги:</h2>
-            <label><input type="checkbox" value="сливочная моцарелла"> Сливочная моцарелла</label><br />
-            <label><input type="checkbox" value="сырный борт"> Сырный борт</label><br />
-            <label><input type="checkbox" value="чедер и пармезан"> Чедер и пармезан</label><br />
-        </div>
-
-        <button id="btnSubmit" class="is-hidden">Рассчитать стоимость и калорийность</button>
-
-        <h2>Итог:</h2>
-        <div id="outputDisplay"></div>
+        <p id="resultText"></p>
     </div>
 
     <script src="pizza.js"></script>

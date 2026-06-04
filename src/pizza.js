@@ -1,118 +1,110 @@
-const MENU_ITEMS = {
-    "Маргарита": { cost: 500, ccal: 300 },
-    "Пепперони": { cost: 800, ccal: 400 },
-    "Баварская": { cost: 700, ccal: 450 }
+const FOOD_MENU = {
+    "Маргарита": { price: 500, calories: 300 },
+    "Пепперони": { price: 800, calories: 400 },
+    "Баварская": { price: 700, calories: 450 }
 };
 
-const SIZE_VALUES = {
-    "Большая": { cost: 200, ccal: 200 },
-    "Маленькая": { cost: 100, ccal: 100 }
+const SIZE_METRICS = {
+    "Большая": { price: 200, calories: 200 },
+    "Маленькая": { cost: 100, price: 100, calories: 100 }
 };
 
-const EXTRA_ITEMS = {
-    "сливочная моцарелла": { cost: 50, ccal: 20 },
-    "сырный борт": { cost_sm: 150, cost_lg: 300, ccal: 50 },
-    "чедер и пармезан": { cost_sm: 150, cost_lg: 300, ccal: 50 }
+const EXTRA_TOPPINGS = {
+    "сырный борт": { priceSmall: 150, priceLarge: 300, calories: 50 },
+    "сливочная моцарелла": { price: 50, calories: 20 },
+    "чедер и пармезан": { priceSmall: 150, priceLarge: 300, calories: 50 }
 };
 
 class Pizza {
-    constructor(pizzaType, size) {
-        if (!MENU_ITEMS[pizzaType] || !SIZE_VALUES[size]) {
-            throw new Error("Неверные параметры пиццы");
-        }
-        this.type = pizzaType;
-        this.sizeValue = size;
-        this.toppingList = [];
+    constructor() {
+        this.pizzaType = null;
+        this.size = null;
+        this.toppings = [];
     }
 
     addTopping(topping) {
-        if (!EXTRA_ITEMS[topping]) {
-            throw new Error("Неверная добавка");
+        const idx = this.toppings.indexOf(topping);
+        if (idx === -1) {
+            this.toppings.push(topping);
+        } else {
+            this.toppings.splice(idx, 1);
         }
-        if (!this.toppingList.includes(topping)) {
-            this.toppingList.push(topping);
-        }
-    }
-
-    removeTopping(topping) {
-        const idx = this.toppingList.indexOf(topping);
-        if (idx !== -1) {
-            this.toppingList.splice(idx, 1);
-        }
-    }
-
-    getToppings() {
-        return this.toppingList;
-    }
-
-    getSize() {
-        return this.type;
-    }
-
-    getStuffing() {
-        return this.sizeValue;
+        updateButton();
     }
 
     calculatePrice() {
-        const baseCost = MENU_ITEMS[this.type].cost;
-        const sizeCost = SIZE_VALUES[this.sizeValue].cost;
-        let toppingsCost = 0;
-        
-        for (const top of this.toppingList) {
-            const item = EXTRA_ITEMS[top];
-            if (top === "сырный борт" || top === "чедер и пармезан") {
-                toppingsCost += (this.sizeValue === "Маленькая" ? item.cost_sm : item.cost_lg);
-            } else {
-                toppingsCost += item.cost;
+        const base = FOOD_MENU[this.pizzaType]?.price || 0;
+        const sizePrice = SIZE_METRICS[this.size]?.price || 0;
+
+        const extras = this.toppings.reduce((total, topping) => {
+            const data = EXTRA_TOPPINGS[topping];
+            if (data.priceSmall !== undefined) {
+                return total + (this.size === "Маленькая" ? data.priceSmall : data.priceLarge);
             }
-        }
-        return baseCost + sizeCost + toppingsCost;
+            return total + data.price;
+        }, 0);
+
+        return base + sizePrice + extras;
     }
 
     calculateCalories() {
-        const baseCcal = MENU_ITEMS[this.type].ccal;
-        const sizeCcal = SIZE_VALUES[this.sizeValue].ccal;
-        let toppingsCcal = 0;
+        const base = FOOD_MENU[this.pizzaType]?.calories || 0;
+        const sizeCcal = SIZE_METRICS[this.size]?.calories || 0;
+        const extrasCcal = this.toppings.reduce((total, topping) => {
+            return total + (EXTRA_TOPPINGS[topping]?.calories || 0);
+        }, 0);
 
-        for (const top of this.toppingList) {
-            toppingsCcal += EXTRA_ITEMS[top].ccal;
-        }
-        return baseCcal + sizeCcal + toppingsCcal;
+        return base + sizeCcal + extrasCcal;
     }
 }
 
-document.getElementById('basePizza').addEventListener('change', () => {
-    document.getElementById('sizeContainer').classList.remove('is-hidden');
-});
+const pizza = new Pizza();
 
-document.getElementById('pizzaSize').addEventListener('change', () => {
-    document.getElementById('extrasContainer').classList.remove('is-hidden');
-    document.getElementById('btnSubmit').classList.remove('is-hidden');
-});
-
-document.getElementById('btnSubmit').addEventListener('click', () => {
-    const pizzaType = document.getElementById('basePizza').value;
-    const size = document.getElementById('pizzaSize').value;
-
-    if (!pizzaType || !size) {
-        alert("Выберите пиццу и размер.");
-        return;
-    }
-
-    const pizza = new Pizza(pizzaType, size);
-    const checkboxes = document.querySelectorAll('#extrasContainer input[type=checkbox]');
-    
-    checkboxes.forEach(box => {
-        if (box.checked) {
-            pizza.addTopping(box.value);
-        }
+document.querySelectorAll('.pizza-thumb').forEach(item => {
+    item.addEventListener('click', () => {
+        document.querySelectorAll('.pizza-thumb').forEach(p => p.classList.remove('selected'));
+        item.classList.add('selected');
+        pizza.pizzaType = item.getAttribute('data-type');
+        updateButton();
     });
+});
 
+document.querySelector('input[name=size][value="Маленькая"]').checked = true;
+pizza.size = "Маленькая";
+document.querySelector('input[name=size][value="Маленькая"]').parentElement.classList.add('selected');
+
+document.querySelectorAll('input[name=size]').forEach(radio => {
+    radio.addEventListener('change', () => {
+        pizza.size = radio.value;
+        document.querySelectorAll('.size-toggle-btn').forEach(opt => opt.classList.remove('selected'));
+        radio.parentElement.classList.add('selected');
+        updateButton();
+    });
+});
+
+document.querySelectorAll('.extras-thumb').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('selected');
+        pizza.addTopping(item.getAttribute('data-topping'));
+        updateButton();
+    });
+});
+
+function updateButton() {
     const price = pizza.calculatePrice();
     const calories = pizza.calculateCalories();
+    document.getElementById('price').textContent = price || '0';
+    document.getElementById('calories').textContent = calories || '0';
+}
 
-    document.getElementById('outputDisplay').innerHTML = `
-        <p><strong>Стоимость:</strong> ${price} руб.</p>
-        <p><strong>Калорийность:</strong> ${calories} ккал</p>
-    `;
+document.getElementById('btnAddToCart').addEventListener('click', () => {
+    if (!pizza.pizzaType || !pizza.size) {
+        alert("Выберите тип пиццы и размер.");
+        return;
+    }
+    const price = pizza.calculatePrice();
+    const calories = pizza.calculateCalories();
+    document.getElementById('resultText').innerText = `Заказ оформлен! Стоимость: ${price} рублей, Калорийность: ${calories} Ккалорий`;
 });
+
+updateButton();
