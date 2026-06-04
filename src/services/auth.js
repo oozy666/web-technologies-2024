@@ -34,7 +34,6 @@ class Auth {
 
     static async logout () {
         Auth.token = ''
-        // return await AuthRepository.logout()
     }
 }
 
