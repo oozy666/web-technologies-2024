@@ -2,15 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title><?= $title ?></title>
+    <title><?= htmlspecialchars($title) ?></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="site-navigation">
+    <div class="navigation-panel">
         <?= $menu ?>
-    </nav>
-    <main class="site-content">
+    </div>
+    <div class="content-panel">
         <?= $content ?>
-    </main>
+    </div>
 </body>
 </html>
