@@ -38,7 +38,60 @@ switch ($page) {
 
     case 'catalog':
         $params['title'] = 'Каталог';
-        $params['catalog'] = getCatalog();
+        require_once BASE_PATH . '/app/create_db.php';
+        $stmt = $pdo->query("SELECT * FROM products ORDER BY id ASC");
+        $params['catalog'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        break;
+
+    case 'product':
+        $id = (int)($_GET['id'] ?? 0);
+        require_once BASE_PATH . '/app/create_db.php';
+        require_once BASE_PATH . '/app/reviews.php';
+
+        $stmt = $pdo->prepare("SELECT * FROM products WHERE id = ?");
+        $stmt->execute([$id]);
+        $product = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$product) {
+            header("HTTP/1.0 404 Not Found");
+            echo "Товар не найден";
+            exit;
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $action = $_GET['action'] ?? '';
+            if ($action === 'add_review') {
+                $name = trim($_POST['name'] ?? '');
+                $text = trim($_POST['text'] ?? '');
+                if ($name !== '' && $text !== '') {
+                    doFeedbackAction('create', [
+                        'product_id' => $id,
+                        'name' => $name,
+                        'text' => $text
+                    ]);
+                }
+            } elseif ($action === 'delete_review') {
+                $reviewId = (int)($_POST['review_id'] ?? 0);
+                doFeedbackAction('delete', ['id' => $reviewId]);
+            } elseif ($action === 'edit_review') {
+                $reviewId = (int)($_POST['review_id'] ?? 0);
+                $name = trim($_POST['name'] ?? '');
+                $text = trim($_POST['text'] ?? '');
+                if ($name !== '' && $text !== '') {
+                    doFeedbackAction('update', [
+                        'id' => $reviewId,
+                        'name' => $name,
+                        'text' => $text
+                    ]);
+                }
+            }
+            header("Location: index.php?page=product&id=" . $id);
+            exit;
+        }
+
+        $params['title'] = $product['name'];
+        $params['product'] = $product;
+        $params['reviews'] = doFeedbackAction('read', ['product_id' => $id]);
         break;
 
     case 'categories':
