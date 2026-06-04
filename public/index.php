@@ -41,6 +41,13 @@ switch ($page) {
         $params['catalog'] = getCatalog();
         break;
 
+    case 'categories':
+        $params['title'] = 'Категории';
+        require_once BASE_PATH . '/app/create_db.php';
+        require_once BASE_PATH . '/app/menu.php';
+        $params['pdo'] = $pdo;
+        break;
+
     case 'about':
         $params['title'] = 'О нас';
         $params['phone'] = '8 (800) 555-35-35';
