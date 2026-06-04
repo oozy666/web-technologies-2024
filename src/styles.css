@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fa;
+    color: #333;
+    padding: 30px;
+    margin: 0;
+}
+
+.pizza-calculator-box {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.form-step {
+    margin-bottom: 22px;
+}
+
+select {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+select:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+button {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0052a3;
+}
+
+#outputDisplay {
+    background-color: #f0f4f8;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 15px;
+    border-left: 4px solid #0066cc;
+    margin-top: 15px;
+}
+
+#outputDisplay p {
+    margin: 5px 0;
+}
+
+.is-hidden {
+    display: none;
+}
